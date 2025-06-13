@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="theme-color" content="#0072ff" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drupad Dhamdhere | Portfolio</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .navbar {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .home-section {
+      padding: 120px 20px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+    }
+    .highlight {
+      color: #ffd700;
+    }
+    section h2 {
+      border-bottom: 2px solid #0072ff;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .contact-form input, .contact-form textarea {
+      border-radius: 10px;
+    }
+    footer {
+      background: #111;
+      color: #aaa;
+      padding: 20px;
+    }
+    .nav-link:hover {
+      color: #ffd700 !important;
+    }
+    .container ul li {
+      margin-bottom: 10px;
+    }
+    .btn-primary {
+      background-color: #0072ff;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #005bd1;
+    }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin: 20px auto;
+      display: block;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 999;
+    }
+    .dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+.dark-mode .card .text-muted {
+  color: #aaa !important;
+}
+
+.dark-mode .progress-bar {
+  background-color: #0072ff;
+}
+.card {
+  transition: background-color 0.3s, color 0.3s;
+}
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #0072ff;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+}
+#backToTopBtn:hover {
+  background-color: #005bd1;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #0072ff;
+  transform: translateX(-50%);
+}
+
+.timeline-card {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.timeline-card.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-card.right {
+  left: 50%;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .timeline-card {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+    <div id="progressBar"></div>
+
+  <button class="btn btn-warning theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Drupad Dhamdhere</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="home-section text-center">
+    <div class="container" data-aos="fade-down">
+      <img src="assets/profile.jpg" alt="Drupad Dhamdhere" class="profile-img">
+      <h1>Hi, I am <span class="highlight">Drupad Dhamdhere</span></h1>
+      <p class="lead"><span id="typed"></span></p>
+    </div>
+  </section>
+
+  <!-- About -->
+<section id="about" class="container py-5" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>I’m a passionate learner in the field of Information Technology with experience in programming, cloud technologies, and AI. I thrive on challenges and enjoy applying my skills to meaningful projects.</p>
+  <p><strong>Email:</strong> <a href="mailto:dhamdheredrupad@gmail.com">dhamdheredrupad@gmail.com</a></p>
+  <p><strong>GitHub:</strong> <a href="https://github.com/dashboard" target="_blank">github.com/dashboard</a></p>
+  <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/drupad-dhamdhere" target="_blank">drupad-dhamdhere</a></p>
+</section>
+
+<!-- Education -->
+<section id="education" class="container py-5" data-aos="fade-right">
+  <h2>Education</h2>
+  <div class="timeline position-relative">
+  <div class="timeline-card left" data-aos="fade-right">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">B.E. in Information Technology</h5>
+        <p class="card-text">PES Modern College of Engineering, Pune (2023–Present)</p>
+        <p class="text-muted">CGPA: 8.80</p>
+      </div>
+    </div>
+  </div>
+  <div class="timeline-card right" data-aos="fade-left">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Diploma in Computer Science</h5>
+        <p class="card-text">MIT Pune (2020–2023)</p>
+        <p class="text-muted">Percentage: 88.80%</p>
+      </div>
+    </div>
+  </div>
+  <div class="timeline-card left" data-aos="fade-right">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">SSC</h5>
+        <p class="card-text">Loyola High School, Pune (2019–2020)</p>
+        <p class="text-muted">Percentage: 78.40%</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+<!-- Skills -->
+<section id="skills" class="container py-5" data-aos="fade-left">
+  <h2>Skills</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Python</p>
+      <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+      </div>
+      <p>HTML & CSS</p>
+      <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 95%;">95%</div>
+      </div>
+      <p>JavaScript</p>
+      <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 85%;">85%</div>
+      </div>
+      <p>Bootstrap</p>
+      <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <p>Java</p>
+      <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 75%;">75%</div>
+      </div>
+      <p>MySQL</p>
+      <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 80%;">80%</div>
+      </div>
+      <p>MongoDB</p>
+      <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 70%;">70%</div>
+      </div>
+      <p>Power BI</p>
+      <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="container py-5" data-aos="zoom-in">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Stock Price Prediction using ML</strong>: Built using Python, Scikit-learn, Pandas, and Matplotlib.</li>
+    <li><strong>Ultrasonic Predator Radar System</strong>: Designed using ultrasonic sensors & Arduino. Research paper published.</li>
+    <li><strong>Pune Metro Website</strong>: Created a static website using HTML, CSS, and JavaScript.</li>
+  </ul>
+</section>
+<!-- Internships -->
+<section id="Experience" class="container py-5" data-aos="fade-up">
+  <h2>Internships</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">AI/ML Virtual Internship</h5>
+          <h6 class="card-subtitle mb-2 text-muted">EduSkills x Google</h6>
+          <p class="card-text"><small>Jan 2025 – Mar 2025</small></p>
+          <ul>
+            <li>Used Python & tools like Jupyter, VS Code</li>
+            <li>Learned LSTM, Random Forest, SVC</li>
+            <li><a href="https://g.dev/DrupadDhamdhere_PESMCOE" target="_blank">Google Badges</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Machine Learning Internship</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Corizo</h6>
+          <p class="card-text"><small>Jan 2025 – Mar 2025</small></p>
+          <ul>
+            <li>Worked on real-time datasets</li>
+            <li>Tested ML models using Python</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Microcert Internship</h5>
+          <h6 class="card-subtitle mb-2 text-muted">KasNet</h6>
+          <p class="card-text"><small>Jun 2022 – Aug 2022</small></p>
+          <ul>
+            <li>Learned cloud computing basics</li>
+            <li>Explored hands-on cloud tools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Resume Download -->
+  <section id="resume" class="container py-5" data-aos="fade-up">
+    <h2>Download My Resume</h2>
+    <p>You can download my resume in PDF format by clicking the button below:</p>
+    <a href="assets/DrupadDhamdhere.pdf" class="btn btn-success" download><i class="fas fa-download"></i> Download Resume</a>
+  </section>
+
+  <!-- Contact -->
+<section id="contact" class="container py-5" data-aos="fade-left">
+  <h2>Contact Me</h2>
+  <form class="contact-form" action="https://formspree.io/f/xjkrwqgd" method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Your Email</label>
+      <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Your Message</label>
+      <textarea class="form-control" name="message" id="message" rows="4" placeholder="Type your message here" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Message</button>
+  </form>
+</section>
+
+  <!-- [Remaining Sections Omitted for Brevity - Already Included Above] -->
+  
+  <footer class="text-center">
+    &copy; 2025 Drupad Dhamdhere. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener('scroll', function () {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (scrollTop / scrollHeight) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+});
+
+    var typed = new Typed("#typed", {
+      strings: [
+        "I’m a passionate learner in the field of Information Technology.",
+        "I have experience in programming, cloud technologies, and AI.",
+        "I thrive on challenges and enjoy building meaningful projects."
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <button onclick="scrollToTop()" id="backToTopBtn" class="btn btn-primary" title="Go to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<script>
+  // Back to Top Button Logic
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function (registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }, function (err) {
+          console.log('Service Worker registration failed:', err);
+        });
+    });
+  }
+</script>
+
+
+</body>
+</html>
