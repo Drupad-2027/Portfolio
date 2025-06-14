@@ -17,6 +17,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
@@ -179,7 +184,16 @@
 .project-card:hover p {
   color: #fff;
 }
+.card {
+  border-left: 5px solid #0072ff; /* Example blue accent */
+}
 
+
+.bg-soft-blue {
+  background-color: #f0f8ff; /* soft bluish white */
+}
+
+ 
 
 
   </style>
@@ -220,87 +234,103 @@
     </div>
   </section>
 
-  <!-- About -->
-<section id="about" class="container py-5" data-aos="fade-up">
-  <h2>About Me</h2>
-  <p>I’m a passionate learner in the field of Information Technology with experience in programming, cloud technologies, and AI. I thrive on challenges and enjoy applying my skills to meaningful projects.</p>
-  <p><strong>Email:</strong> <a href="mailto:dhamdheredrupad@gmail.com">dhamdheredrupad@gmail.com</a></p>
-  <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/drupad-dhamdhere" target="_blank">drupad-dhamdhere</a></p>
-  
+<section id="about" class="container-fluid py-5 bg-soft-blue" data-aos="fade-up">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>I’m a passionate learner in the field of Information Technology...</p>
+    <p><i class="bi bi-envelope-fill me-2"></i><strong>Email:</strong> <a href="mailto:dhamdheredrupad@gmail.com">dhamdheredrupad@gmail.com</a></p>
+    <p><i class="bi bi-linkedin me-2"></i><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/drupad-dhamdhere" target="_blank">drupad-dhamdhere</a></p>
+  </div>
 </section>
+
+
+
 
 <!-- Education -->
 <section id="education" class="container py-5" data-aos="fade-right">
-  <h2>Education</h2>
+  <h2 class="text-center mb-4">Education</h2>
   <div class="timeline position-relative">
-  <div class="timeline-card left" data-aos="fade-right">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">B.E. in Information Technology</h5>
-        <p class="card-text">PES Modern College of Engineering, Pune (2023–Present)</p>
-        <p class="text-muted">CGPA: 8.80</p>
-      </div>
-    </div>
-  </div>
-  <div class="timeline-card right" data-aos="fade-left">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Diploma in Computer Science</h5>
-        <p class="card-text">MIT Pune (2020–2023)</p>
-        <p class="text-muted">Percentage: 88.80%</p>
-      </div>
-    </div>
-  </div>
-  <div class="timeline-card left" data-aos="fade-right">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">SSC</h5>
-        <p class="card-text">Loyola High School, Pune (2019–2020)</p>
-        <p class="text-muted">Percentage: 78.40%</p>
-      </div>
-    </div>
-  </div>
-</div>
 
+    <!-- BE -->
+    <div class="timeline-card left" data-aos="fade-right">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-mortarboard-fill me-2"></i>B.E. in Information Technology
+          </h5>
+          <p class="card-text">PES Modern College of Engineering, Pune (2023–Present)</p>
+          <p class="text-muted">CGPA: 8.80</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diploma -->
+    <div class="timeline-card right" data-aos="fade-left">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-laptop-fill me-2"></i>Diploma in Computer Science
+          </h5>
+          <p class="card-text">MIT Pune (2020–2023)</p>
+          <p class="text-muted">Percentage: 88.80%</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SSC -->
+    <div class="timeline-card left" data-aos="fade-right">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-book-fill me-2"></i>SSC
+          </h5>
+          <p class="card-text">Loyola High School, Pune (2019–2020)</p>
+          <p class="text-muted">Percentage: 78.40%</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
+
 
 
 <!-- Skills -->
 <section id="skills" class="container py-5" data-aos="fade-left">
-  <h2>Skills</h2>
+  <h2 class="text-center mb-4">Skills</h2>
   <div class="row">
     <div class="col-md-6">
-      <p>Python</p>
+      <p><i class="devicon-python-plain colored me-2"></i>Python</p>
       <div class="progress mb-3">
         <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
       </div>
-      <p>HTML & CSS</p>
+      <p><i class="devicon-html5-plain colored me-2"></i><i class="devicon-css3-plain colored me-2"></i>HTML & CSS</p>
       <div class="progress mb-3">
         <div class="progress-bar" role="progressbar" style="width: 95%;">95%</div>
       </div>
-      <p>JavaScript</p>
+      <p><i class="devicon-javascript-plain colored me-2"></i>JavaScript</p>
       <div class="progress mb-3">
         <div class="progress-bar" role="progressbar" style="width: 85%;">85%</div>
       </div>
-      <p>Bootstrap</p>
+      <p><i class="devicon-bootstrap-plain colored me-2"></i>Bootstrap</p>
       <div class="progress mb-3">
         <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
       </div>
     </div>
     <div class="col-md-6">
-      <p>Java</p>
+      <p><i class="devicon-java-plain colored me-2"></i>Java</p>
       <div class="progress mb-3">
         <div class="progress-bar" role="progressbar" style="width: 75%;">75%</div>
       </div>
-      <p>MySQL</p>
+      <p><i class="devicon-mysql-plain colored me-2"></i>MySQL</p>
       <div class="progress mb-3">
         <div class="progress-bar" role="progressbar" style="width: 80%;">80%</div>
       </div>
-      <p>MongoDB</p>
+      <p><i class="devicon-mongodb-plain colored me-2"></i>MongoDB</p>
       <div class="progress mb-3">
         <div class="progress-bar" role="progressbar" style="width: 70%;">70%</div>
       </div>
-      <p>Power BI</p>
+      <p><i class="devicon-powerbi-plain colored me-2"></i>Power BI</p>
       <div class="progress mb-3">
         <div class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
       </div>
@@ -308,27 +338,29 @@
   </div>
 </section>
 
+
 <section id="projects" class="container py-5">
   <h2>Projects</h2>
 
   <div class="row">
     <div class="col-md-4 mb-4">
       <div class="project-card">
-        <h5>Stock Price Prediction</h5>
+        <h5>Stock Price Prediction using Machine Learning</h5>
         <p>Built using Python, Scikit-learn, Pandas, and Matplotlib.</p>
       </div>
     </div>
 
     <div class="col-md-4 mb-4">
       <div class="project-card">
-        <h5>Ultrasonic Predator Radar</h5>
+        <h5>Ultrasonic Predator Radar System</h5>
         <p>Designed with ultrasonic sensors & Arduino.</p>
+        <p><strong>Paper Publication:</strong> Ultrasonic Predictor Radar System, IJET Vol 9 Issue 2-2023 (Paper ID: IJET-V912P12)</p>
       </div>
     </div>
 
     <div class="col-md-4 mb-4">
       <div class="project-card">
-        <h5>Pune Metro Website</h5>
+        <h5>Pune Metro Website(Basic)</h5>
         <p>Static website using HTML, CSS, and JavaScript.</p>
       </div>
     </div>
@@ -389,57 +421,99 @@
 
 
 
-  <!-- Resume Download -->
-  <section id="resume" class="container py-5" data-aos="fade-up">
-    <h2>Download My Resume</h2>
-    <p>You can download my resume in PDF format by clicking the button below:</p>
-    <a href="assets/DrupadDhamdhere.pdf" class="btn btn-success" download><i class="fas fa-download"></i> Download Resume</a>
-  </section>
-<section id="hobbies" class="container my-5">
-  <h2 class="text-center mb-4">My Hobbies</h2>
-  <div class="row text-center">
-    <div class="col-md-4 mb-4">
-      <i class="bi bi-droplet-half fs-1 text-primary"></i>
-      <h5 class="mt-2">Swimming</h5>
-      <p>National-level swimmer specializing in the butterfly stroke.</p>
-    </div>
-    <div class="col-md-4 mb-4">
-      <i class="bi bi-heart-pulse fs-1 text-success"></i>
-      <h5 class="mt-2">Fitness Freak</h5>
-      <p>Dedicated to maintaining a healthy lifestyle through workouts and clean eating.</p>
-    </div>
-    <div class="col-md-4 mb-4">
-      <i class="bi bi-geo-alt fs-1 text-warning"></i>
-      <h5 class="mt-2">Traveller</h5>
-      <p>Passionate about exploring new places, cultures, and experiences around the world.</p>
-    </div>
-  </div>
+ <!-- Resume Download -->
+<section id="resume" class="container py-5" data-aos="fade-up">
+  <h2 class="text-center mb-4">Download My Resume</h2>
 
-  <div class="text-center mt-4">
-    <p><strong>Follow me on Instagram to know more about me:</strong></p>
-    <a href="https://instagram.com/drupad_2027" target="_blank" class="btn btn-danger">
-      <i class="bi bi-instagram"></i> Follow me
-    </a>
+  <div class="p-4 rounded-4 shadow-lg" style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);">
+
+    <div class="row align-items-center">
+      
+      <!-- Resume Image or Preview -->
+      <div class="col-md-6 text-center mb-4">
+        <img src="assets/resume-preview.png" alt="Resume Preview" class="img-fluid rounded shadow" style="max-height: 400px;">
+      </div>
+
+      <!-- Description and Download Button -->
+      <div class="col-md-6 text-center text-md-start">
+        <p class="lead">Get a detailed overview of my qualifications and skills in my resume.</p>
+        <a href="assets/DrupadDhamdhere.pdf" class="btn btn-success btn-lg mt-3" download>
+          <i class="bi bi-download me-2"></i>Resume
+        </a>
+      </div>
+
+    </div>
+
   </div>
 </section>
-  <!-- Contact -->
-<section id="contact" class="container py-5" data-aos="fade-left">
-  <h2>Contact Me</h2>
-  <form class="contact-form" action="https://formspree.io/f/xjkrwqgd" method="POST">
-    <div class="mb-3">
-      <label for="name" class="form-label">Your Name</label>
-      <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+
+
+
+<section id="hobbies" class="container-fluid py-5" style="background: #f8f9ff;">
+  <div class="container">
+    <h2 class="text-center mb-4">My Hobbies</h2>
+
+    <div class="p-4 rounded-4 shadow" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(8px);">
+      <div class="row text-center">
+        <div class="col-md-4 mb-4 hobby-card">
+          <i class="bi bi-droplet-half fs-1 text-primary"></i>
+          <h5 class="mt-2">Swimming</h5>
+          <p>National-level swimmer specializing in the butterfly stroke.</p>
+        </div>
+        <div class="col-md-4 mb-4 hobby-card">
+          <i class="bi bi-heart-pulse fs-1 text-success"></i>
+          <h5 class="mt-2">Fitness Freak</h5>
+          <p>Dedicated to maintaining a healthy lifestyle through workouts and clean eating.</p>
+        </div>
+        <div class="col-md-4 mb-4 hobby-card">
+          <i class="bi bi-geo-alt fs-1 text-warning"></i>
+          <h5 class="mt-2">Traveller</h5>
+          <p>Passionate about exploring new places, cultures, and experiences around the world.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p><strong>Follow me on Instagram to know more about me:</strong></p>
+        <a href="https://instagram.com/drupad_2027" target="_blank" class="btn btn-danger">
+          <i class="bi bi-instagram me-2"></i> drupad_2027
+        </a>
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Your Email</label>
-      <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
+  </div>
+</section>
+
+ <section id="contact" class="container py-5" data-aos="fade-left">
+  <h2 class="text-center mb-4">Contact Me</h2>
+
+  <div class="p-4 rounded-4 shadow-lg" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px);">
+    <form class="contact-form" action="https://formspree.io/f/xjkrwqgd" method="POST">
+      <div class="input-group mb-3">
+        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text"><i class="bi bi-chat-dots-fill"></i></span>
+        <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary px-4 py-2 shadow-sm">
+          <i class="bi bi-send-fill me-2"></i>Send Message
+        </button>
+      </div>
+    </form>
+
+    <div class="text-center mt-4">
+      <p>Or connect with me on:</p>
+      <a href="https://linkedin.com/in/drupad-dhamdhere" target="_blank" class="btn btn-outline-primary me-2">
+        <i class="bi bi-linkedin"></i>
+      </a>
+  
     </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Your Message</label>
-      <textarea class="form-control" name="message" id="message" rows="4" placeholder="Type your message here" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send Message</button>
-  </form>
+  </div>
 </section>
 
   <!-- [Remaining Sections Omitted for Brevity - Already Included Above] -->
