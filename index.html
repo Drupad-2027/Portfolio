@@ -27,6 +27,7 @@
     .navbar {
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+    
     .home-section {
   padding: 120px 20px;
   background: linear-gradient(to right, #00c6ff, #0072ff), url('assets/profile.jpg');
@@ -35,7 +36,6 @@
   background-repeat: no-repeat;
   color: white;
 }
-
     .highlight {
       color: #ffd700;
     }
@@ -154,6 +154,27 @@
     text-align: left !important;
   }
 }
+.project-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgb(0 0 0 / 0.2);
+  background: #0072ff;
+  color: #fff;
+}
+
+.project-card:hover h5,
+.project-card:hover p {
+  color: #fff;
+}
+
 
 
   </style>
@@ -198,7 +219,6 @@
   <h2>About Me</h2>
   <p>I’m a passionate learner in the field of Information Technology with experience in programming, cloud technologies, and AI. I thrive on challenges and enjoy applying my skills to meaningful projects.</p>
   <p><strong>Email:</strong> <a href="mailto:dhamdheredrupad@gmail.com">dhamdheredrupad@gmail.com</a></p>
-  <p><strong>GitHub:</strong> <a href="https://github.com/dashboard" target="_blank">github.com/dashboard</a></p>
   <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/drupad-dhamdhere" target="_blank">drupad-dhamdhere</a></p>
 </section>
 
@@ -281,15 +301,34 @@
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="container py-5" data-aos="zoom-in">
+<section id="projects" class="container py-5">
   <h2>Projects</h2>
-  <ul>
-    <li><strong>Stock Price Prediction using ML</strong>: Built using Python, Scikit-learn, Pandas, and Matplotlib.</li>
-    <li><strong>Ultrasonic Predator Radar System</strong>: Designed using ultrasonic sensors & Arduino. Research paper published.</li>
-    <li><strong>Pune Metro Website</strong>: Created a static website using HTML, CSS, and JavaScript.</li>
-  </ul>
+
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="project-card">
+        <h5>Stock Price Prediction</h5>
+        <p>Built using Python, Scikit-learn, Pandas, and Matplotlib.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="project-card">
+        <h5>Ultrasonic Predator Radar</h5>
+        <p>Designed with ultrasonic sensors & Arduino.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="project-card">
+        <h5>Pune Metro Website</h5>
+        <p>Static website using HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+
+  </div>
 </section>
+
 <!-- Internships -->
 <section id="Experience" class="container py-5" data-aos="fade-up">
   <h2>Internships</h2>
