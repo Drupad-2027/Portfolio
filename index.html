@@ -192,8 +192,44 @@
 .bg-soft-blue {
   background-color: #f0f8ff; /* soft bluish white */
 }
+.highlight {
+  color: #ffe600; /* Bright yellow or any accent color */
+  font-weight: bold;
+}
 
- 
+ .profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+.home-section {
+  background: linear-gradient(to right, #0072ff, #00c6ff); /* Cool gradient */
+  color: #fff;
+  padding: 100px 0;
+  position: relative;
+}
+.card {
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title i {
+  font-size: 1.2rem;
+}
+
 
 
   </style>
@@ -225,23 +261,24 @@
     </div>
   </nav>
 
-  <!-- Home -->
-  <section id="home" class="home-section text-center">
-    <div class="container" data-aos="fade-down">
-      <img src="assets/profile.jpg" alt="Drupad Dhamdhere" class="profile-img">
-      <h1>Hi, I am <span class="highlight">Drupad Dhamdhere</span></h1>
-      <p class="lead"><span id="typed"></span></p>
+  <section id="home" class="home-section text-white text-center">
+  <div class="container" data-aos="zoom-in">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <h1>Hi, I am <span class="highlight">Drupad Dhamdhere</span></h1>
+        <p class="lead"><span id="typed"></span></p>
+        <div class="social-icons mt-3">
+          <a href="https://linkedin.com/in/drupad-dhamdhere" target="_blank" class="me-3 text-white"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:dhamdheredrupad@gmail.com" class="text-white"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="assets/profile.jpg" alt="Drupad Dhamdhere" class="profile-img">
+      </div>
     </div>
-  </section>
-
-<section id="about" class="container-fluid py-5 bg-soft-blue" data-aos="fade-up">
-  <div class="container">
-    <h2>About Me</h2>
-    <p>I’m a passionate learner in the field of Information Technology...</p>
-    <p><i class="bi bi-envelope-fill me-2"></i><strong>Email:</strong> <a href="mailto:dhamdheredrupad@gmail.com">dhamdheredrupad@gmail.com</a></p>
-    <p><i class="bi bi-linkedin me-2"></i><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/drupad-dhamdhere" target="_blank">drupad-dhamdhere</a></p>
   </div>
 </section>
+
 
 
 
@@ -368,54 +405,59 @@
   </div>
 </section>
 
+
 <!-- Internships -->
 <section id="Experience" class="container py-5" data-aos="fade-up">
-  <h2>Internships</h2>
+  <h2 class="text-center mb-5">Internships</h2>
   <div class="row">
+    <!-- Card 1 -->
     <div class="col-md-4 mb-4">
-      <div class="card h-100">
+      <div class="card h-100 shadow-sm border-0" data-aos="zoom-in">
         <div class="card-body">
-          <h5 class="card-title">AI/ML Virtual Internship</h5>
+          <h5 class="card-title"><i class="bi bi-brain me-2 text-primary"></i>AI/ML Virtual Internship</h5>
           <h6 class="card-subtitle mb-2 text-muted">EduSkills x Google</h6>
-          <p class="card-text"><small>Jan 2025 – Mar 2025</small></p>
-          <ul>
-            <li>Used Python & tools like Jupyter, VS Code</li>
-            <li>Learned LSTM, Random Forest, SVC</li>
-            <li><a href="https://g.dev/DrupadDhamdhere_PESMCOE" target="_blank">Google Badges</a></li>
+          <p class="card-text"><small class="text-secondary">Jan 2025 – Mar 2025</small></p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-code-slash text-success me-2"></i>Python, Jupyter, VS Code</li>
+            <li><i class="bi bi-diagram-3-fill text-info me-2"></i>LSTM, Random Forest, SVC</li>
+            <li><i class="bi bi-patch-check-fill text-warning me-2"></i><a href="https://g.dev/DrupadDhamdhere_PESMCOE" target="_blank">Google Badges</a></li>
           </ul>
         </div>
       </div>
     </div>
 
+    <!-- Card 2 -->
     <div class="col-md-4 mb-4">
-      <div class="card h-100">
+      <div class="card h-100 shadow-sm border-0" data-aos="zoom-in" data-aos-delay="100">
         <div class="card-body">
-          <h5 class="card-title">Machine Learning Internship</h5>
+          <h5 class="card-title"><i class="bi bi-cpu-fill me-2 text-success"></i>Machine Learning Internship</h5>
           <h6 class="card-subtitle mb-2 text-muted">Corizo</h6>
-          <p class="card-text"><small>Jan 2025 – Mar 2025</small></p>
-          <ul>
-            <li>Worked on real-time datasets</li>
-            <li>Tested ML models using Python</li>
+          <p class="card-text"><small class="text-secondary">Jan 2025 – Mar 2025</small></p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-database-fill-gear text-info me-2"></i>Real-time datasets</li>
+            <li><i class="bi bi-graph-up text-primary me-2"></i>Tested ML models in Python</li>
           </ul>
         </div>
       </div>
     </div>
 
+    <!-- Card 3 -->
     <div class="col-md-4 mb-4">
-      <div class="card h-100">
+      <div class="card h-100 shadow-sm border-0" data-aos="zoom-in" data-aos-delay="200">
         <div class="card-body">
-          <h5 class="card-title">Microcert Internship</h5>
+          <h5 class="card-title"><i class="bi bi-cloud-fill text-warning me-2"></i>Microcert Internship</h5>
           <h6 class="card-subtitle mb-2 text-muted">KasNet</h6>
-          <p class="card-text"><small>Jun 2022 – Aug 2022</small></p>
-          <ul>
-            <li>Learned cloud computing basics</li>
-            <li>Explored hands-on cloud tools</li>
+          <p class="card-text"><small class="text-secondary">Jun 2022 – Aug 2022</small></p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-cloud-check text-primary me-2"></i>Cloud computing basics</li>
+            <li><i class="bi bi-tools text-secondary me-2"></i>Hands-on with cloud tools</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
