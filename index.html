@@ -440,7 +440,16 @@
 
 
 
-  </style>
+  .image-hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .image-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
 </head>
 <body>
     <div id="progressBar"></div>
@@ -504,53 +513,58 @@
   <div class="container" data-aos="fade-right">
     <h2 class="text-center mb-5">Education</h2>
     <div class="timeline">
-
       <!-- BE -->
-      <div class="timeline-item left" data-aos="fade-right">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content card shadow">
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="bi bi-mortarboard-fill me-2"></i>B.E. in Information Technology
-            </h5>
-            <p class="card-text">PES Modern College of Engineering, Pune (2023–Present)</p>
-            <p class="text-muted">CGPA: 8.80</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Diploma -->
-      <div class="timeline-item right" data-aos="fade-left">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content card shadow">
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="bi bi-laptop-fill me-2"></i>Diploma in Computer Science
-            </h5>
-            <p class="card-text">MIT Pune (2020–2023)</p>
-            <p class="text-muted">Percentage: 88.80%</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- SSC -->
-      <div class="timeline-item left" data-aos="fade-right">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content card shadow">
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="bi bi-book-fill me-2"></i>SSC
-            </h5>
-            <p class="card-text">Loyola High School, Pune (2019–2020)</p>
-            <p class="text-muted">Percentage: 78.40%</p>
-          </div>
-        </div>
-      </div>
-
+<div class="timeline-item left" data-aos="fade-right">
+  <div class="timeline-dot"></div>
+  <div class="timeline-content card shadow">
+    <div class="card-body">
+      <img src="assets/Modern.jpg" alt="PES College Campus" class="img-fluid rounded mb-3" style="height: 160px; object-fit: cover;">
+      <h5 class="card-title">
+        <i class="bi bi-mortarboard-fill me-2"></i>B.E. in Information Technology
+      </h5>
+      <p class="card-text">PES Modern College of Engineering, Pune (2023–Present)</p>
+      <p class="text-muted">CGPA: 8.80</p>
     </div>
   </div>
-</section>
+</div>
 
+
+
+      <!-- Diploma -->
+<div class="timeline-item right" data-aos="fade-left">
+  <div class="timeline-dot"></div>
+  <div class="timeline-content card shadow">
+    <div class="card-body">
+      <img src="assets/Mit.jpg" alt="MIT Pune Campus" class="img-fluid rounded mb-3" style="height: 160px; object-fit: cover;">
+      <h5 class="card-title">
+        <i class="bi bi-laptop-fill me-2"></i>Diploma in Computer Science
+      </h5>
+      <p class="card-text">MIT Pune (2020–2023)</p>
+      <p class="text-muted">Percentage: 88.80%</p>
+    </div>
+  </div>
+</div>
+
+
+      
+      <!-- SSC -->
+<div class="timeline-item left" data-aos="fade-right">
+  <div class="timeline-dot"></div>
+  <div class="timeline-content card shadow">
+    <div class="card-body">
+      <img src="assets/Loyola.jpg" alt="Loyola High School Campus" class="img-fluid rounded mb-3" style="height: 160px; object-fit: cover;">
+      <h5 class="card-title">
+        <i class="bi bi-book-fill me-2"></i>SSC
+      </h5>
+      <p class="card-text">Loyola High School, Pune (2019–2020)</p>
+      <p class="text-muted">Percentage: 78.40%</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+  </div>
+</section>
 
 <!-- Skills -->
 <section id="skills" class="skills-section py-5">
@@ -588,8 +602,14 @@
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 90%">90%</div>
           </div>
         </div>
-      </div>
 
+      <div class="skill-card p-4 shadow-sm rounded bg-white mt-4">
+          <h5><i class="devicon-powerbi-plain me-2"></i>On-Page SEO</h5>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 50%">50%</div>
+          </div>
+        </div>
+        </div>
       <!-- Right Column -->
       <div class="col-md-6">
         <div class="skill-card p-4 shadow-sm rounded bg-white">
@@ -619,6 +639,15 @@
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 60%">60%</div>
           </div>
         </div>
+
+
+        <div class="skill-card p-4 shadow-sm rounded bg-white mt-4">
+          <h5><i class="devicon-powerbi-plain me-2"></i>Off-Page SEO</h5>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 50%">50%</div>
+          </div>
+        </div>
+        
       </div>
 
     </div>
@@ -776,9 +805,7 @@
 
   </div>
 </section>
-
 <section id="hobbies" class="container-fluid py-5" style="background: linear-gradient(to right, #eef2ff, #f8f9ff);">
-
   <div class="container">
     <h2 class="text-center mb-5 fw-bold display-5">
       <i class="bi bi-stars text-info me-2"></i>My Hobbies
@@ -786,11 +813,13 @@
 
     <div class="p-5 rounded-4 shadow-lg hobby-glass">
       <div class="row text-center justify-content-center">
-        
+
         <!-- Swimming -->
         <div class="col-md-4 mb-4 hobby-card">
           <div class="p-4 rounded-3 hobby-item h-100 shadow-sm">
-            <i class="bi bi-droplet-half fs-1 text-primary mb-3 animate__animated animate__fadeInDown"></i>
+            <div class="mb-3 overflow-hidden rounded image-hover" style="aspect-ratio: 4/3;">
+              <img src="assets/Swimming.jpg" alt="Swimming" class="img-fluid w-100 h-100" style="object-fit: cover;">
+            </div>
             <h5 class="fw-semibold">Swimming</h5>
             <p class="text-muted">National-level swimmer specializing in the butterfly stroke.</p>
           </div>
@@ -799,35 +828,47 @@
         <!-- Fitness -->
         <div class="col-md-4 mb-4 hobby-card">
           <div class="p-4 rounded-3 hobby-item h-100 shadow-sm">
-            <i class="bi bi-heart-pulse fs-1 text-success mb-3 animate__animated animate__fadeInDown animate__delay-1s"></i>
+            <div class="mb-3 overflow-hidden rounded image-hover" style="aspect-ratio: 4/3;">
+              <img src="assets/Excercise.jpg" alt="Fitness" class="img-fluid w-100 h-100" style="object-fit: cover;">
+            </div>
             <h5 class="fw-semibold">Fitness Freak</h5>
             <p class="text-muted">Focused on workouts, recovery, and clean eating to stay sharp and healthy.</p>
           </div>
         </div>
 
-        <!-- Travelling -->
+        <!-- Luxury Explorer -->
         <div class="col-md-4 mb-4 hobby-card">
           <div class="p-4 rounded-3 hobby-item h-100 shadow-sm">
-            <i class="bi bi-geo-alt fs-1 text-warning mb-3 animate__animated animate__fadeInDown animate__delay-2s"></i>
-            <h5 class="fw-semibold">Traveller</h5>
-            <p class="text-muted">Passionate about nature, treks, and discovering new places and cultures.</p>
+            <div class="mb-3 overflow-hidden rounded image-hover" style="aspect-ratio: 4/3;">
+              <img src="assets/D1.jpg" alt="Luxury Explorer" class="img-fluid w-100 h-100" style="object-fit: cover;">
+            </div>
+            <h5 class="fw-semibold">Luxury Explorer</h5>
+            <p class="text-muted">Drawn to premium experiences, exotic cars, and iconic places around the world.</p>
           </div>
         </div>
 
       </div>
 
-      <!-- Instagram CTA -->
+      <!-- Instagram & Threads Buttons -->
       <div class="text-center mt-5">
-        <p class="lead mb-3"><strong>Want a glimpse of my journey?</strong><br>Catch it all on Instagram!</p>
-       <a href="https://instagram.com/drupad_2027" target="_blank" class="btn text-white px-4 py-2 fw-bold"
-   style="background: linear-gradient(135deg, #ff4b2b, #ff416c); border: none; border-radius: 30px;">
-  <i class="bi bi-instagram me-2"></i> @drupad_2027
-</a>
+        <p class="lead mb-3"><strong>Want a glimpse of my journey?</strong><br>Catch it all on Instagram & Threads!</p>
 
+        <a href="https://instagram.com/drupad_2027" target="_blank" class="btn text-white px-4 py-2 fw-bold me-2"
+           style="background: linear-gradient(135deg, #ff4b2b, #ff416c); border: none; border-radius: 30px;">
+          <i class="bi bi-instagram me-2"></i> @drupad_2027
+        </a>
+
+        <a href="https://www.threads.net/@drupad_2027" target="_blank" class="btn text-white px-4 py-2 fw-bold"
+           style="background: linear-gradient(135deg, #1a1a1a, #3a3a3a); border: none; border-radius: 30px;">
+          <i class="bi bi-chat-dots me-2"></i> @drupad_2027
+        </a>
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 
  <section id="contact" class="container py-5" data-aos="fade-left">
