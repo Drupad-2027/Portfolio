@@ -470,6 +470,54 @@
 .transition:hover {
   transform: translateY(-5px);
 }
+.text-gradient {
+    background: linear-gradient(to right, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .nav-underline {
+    position: relative;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-underline::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #0d6efd;
+    transition: 0.3s;
+  }
+
+  .nav-underline:hover::after {
+    width: 100%;
+  }
+
+  .nav-underline:hover {
+    color: #0d6efd;
+  }
+
+  .navbar-nav .nav-item .nav-link.active {
+    color: #0d6efd !important;
+    font-weight: 600;
+  }
+
+  .navbar {
+    transition: all 0.4s ease-in-out;
+  }
+
+  @media (max-width: 991px) {
+    .navbar-nav {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
 
 </style>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4eeaf6f78dda425db122a389f929a3cf"}'></script><!-- End Cloudflare Web Analytics -->
@@ -479,27 +527,34 @@
 
   <button class="btn btn-warning theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Drupad Dhamdhere</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Profile & Publications">Profile & Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm" style="background: rgba(0, 0, 0, 0.95);">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4 text-gradient" href="#">Drupad Dhamdhere</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-2 align-items-center">
+        <li class="nav-item"><a class="nav-link nav-underline" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link nav-underline" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link nav-underline" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link nav-underline" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link nav-underline" href="#Experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link nav-underline" href="#Profile & Publications">Profile & Publications</a></li>
+        <li class="nav-item"><a class="nav-link nav-underline" href="#hobbies">Hobbies</a></li>
+        <li class="nav-item"><a class="nav-link nav-underline" href="#contact">Contact</a></li>
+        <!-- Live Time -->
+        <li class="nav-item d-none d-lg-block">
+          <span id="clock" class="nav-link text-info fw-semibold"></span>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
+
 
 <section id="home" class="home-section text-white text-center position-relative">
   <!-- Particle background -->
@@ -1132,6 +1187,15 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
+
+  function updateClock() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+    document.getElementById('clock').textContent = timeString;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // initial call
 </script>
 
 </body>
