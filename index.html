@@ -545,7 +545,7 @@
         <li class="nav-item"><a class="nav-link nav-underline" href="#hobbies">Hobbies</a></li>
         <li class="nav-item"><a class="nav-link nav-underline" href="#contact">Contact</a></li>
         <!-- Live Time -->
-        <li class="nav-item d-none d-lg-block">
+        <li class="nav-item">
           <span id="clock" class="nav-link text-info fw-semibold"></span>
         </li>
       </ul>
@@ -1190,13 +1190,19 @@ particlesJS("particles-js", {
 
   function updateClock() {
     const now = new Date();
-    const timeString = now.toLocaleTimeString();
-    document.getElementById('clock').textContent = timeString;
+    const time = now.toLocaleTimeString();
+    const date = now.toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+    document.getElementById('clock').textContent = `${time} | ${date}`;
   }
 
   setInterval(updateClock, 1000);
-  updateClock(); // initial call
+  updateClock();
 </script>
+
 
 </body>
 </html>
