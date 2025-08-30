@@ -45,7 +45,6 @@ The portfolio is built with:
 ## 🚀 Future Improvements
 - Add a **blog section** (Medium/Dev.to integration)  
 - Implement **dark mode toggle** 🌙  
-- Add **contact form with backend support**  
 
 ---
 
