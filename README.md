@@ -30,7 +30,7 @@ The portfolio is built with:
 
 
 ## 📸 Preview
-![Portfolio Preview](banner.gif)  
+![Portfolio Preview](PP.jpg)  
 
 ---
 
