@@ -24,27 +24,13 @@ The portfolio is built with:
 - **HTML5**  
 - **CSS3**  
 - **JavaScript**  
-- [Bootstrap](https://getbootstrap.com/) (for responsive design)  
+- **Bootstrap**  
 
 ---
 
-## 📂 Project Structure
-Portfolio/
-│── index.html # Home page
-│── about.html # About me section
-│── projects.html # Projects showcase
-│── certifications.html # Certifications & achievements
-│── contact.html # Contact details
-│── assets/ # Images, icons, and other media
-│── css/ # Stylesheets
-│── js/ # JavaScript files
-
-
----
 
 ## 📸 Preview
 ![Portfolio Preview](banner.gif)  
-*(replace banner.gif with a screenshot of your website if you want)*
 
 ---
 
