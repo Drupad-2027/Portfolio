@@ -1121,16 +1121,21 @@ html, body {
 
 
 <section id="testimonials" style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center; 
-    padding: 80px 20px; 
+    padding: 60px 20px; 
     background: linear-gradient(135deg, #e0ebf7, #c8d9e6); 
     border-radius: 20px; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
-    margin: 60px 0;
+    margin: 60px auto;
+    max-width: 800px;
     transition: all 0.3s ease;
 ">
   <h2 style="
-        font-size: 24px; 
+        font-size: 23px; 
         font-weight: 500; 
         color: #1c1c1c; 
         margin-bottom: 30px;
@@ -1138,13 +1143,14 @@ html, body {
     ">
     Professional Testimonials
   </h2>
-  <br>
+  
   <a href="https://www.linkedin.com/in/drupad-dhamdhere/details/recommendations/" 
      target="_blank"
      aria-label="View Drupad Dhamdhere's LinkedIn Recommendations"
      style="
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         background-color: #0077b5; 
         color: white; 
@@ -1155,13 +1161,14 @@ html, body {
         border-radius: 12px; 
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); 
         transition: all 0.3s ease;
+        width: 100%;
+        max-width: 280px;
      "
      onmouseover="this.style.backgroundColor='#005f8c'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 22px rgba(0,0,0,0.2)';"
      onmouseout="this.style.backgroundColor='#0077b5'; this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 18px rgba(0,0,0,0.15)';">
     🔗 LinkedIn Recommendations
   </a>
 </section>
-
 
 
 
